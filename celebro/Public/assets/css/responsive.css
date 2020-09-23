@@ -1,0 +1,563 @@
+﻿/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+
+@charset "UTF-8";
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4 */
+    .carousel-inner .active.col-md-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+/* MD */
+
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+/* LG */
+
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active+.carousel-item+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 1000px) {
+    .pad0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media (max-width: 767.98px) {
+    /* .btnnav {
+        display: none;
+    } */
+    .navitemceleb {
+        display: inline;
+    }
+    .adtmtextall {
+        display: none !important;
+    }
+    .headicon {
+        display: none;
+    }
+    .photo {
+        max-width: 100%;
+    }
+    /* .headnavres {
+        display: flex;
+        justify-content: flex-end;
+    } */
+    .celebimg {
+        margin-bottom: 50px;
+    }
+    .galrespmar {
+        margin-bottom: 50px;
+    }
+    .gallery {
+        margin-bottom: 0;
+    }
+    .sociallinks {
+        position: unset;
+        /* margin-left: 30px; */
+        display: flex;
+        justify-content: center;
+        margin-right: 80px;
+    }
+    .secresp {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .footer {
+        position: unset;
+    }
+    .tit {
+        height: auto;
+        background: unset;
+    }
+    /* .navbar-nav {
+        align-items: flex-end;
+        height: 100%;
+        background-color: black;
+    }
+    .navbar {
+        position: fixed;
+        z-index: 10;
+    }
+    .nav-link {
+        color: white !important;
+    } */
+    #showmore {
+        display: none;
+    }
+    #showless {
+        display: none;
+    }
+    .searchform {
+        background: transparent;
+    }
+    .responsivecatlist {
+        display: block;
+    }
+    .gallery2 {
+        margin-top: 0;
+    }
+    .tit2 {
+        height: auto;
+    }
+    .infoframe {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .mdetail {
+        margin-top: 0;
+    }
+    .carousel-control-prev {
+        display: none;
+    }
+    .carousel-control-next {
+        display: none;
+    }
+    .sayusimg img {
+        object-fit: fill;
+    }
+    .headnav2 {
+        margin-bottom: 50px;
+    }
+    /* .colsmres {
+        width: 49%;
+    } */
+    .logoimg {
+        max-height: 100%;
+        object-fit: none;
+    }
+    /* .logoimg2 {
+        max-height: 120% !important;
+    } */
+    .img-fluid {
+        object-fit: fill;
+    }
+    .tags ul {
+        flex-wrap: wrap;
+    }
+    .adtmtext {
+        flex-wrap: wrap;
+    }
+    .col-sm-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .col-sm-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .col-sm-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .col-sm-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-sm-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .col-sm-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-sm-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-sm-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%
+    }
+    input[type=checkbox] {
+        width: 3rem;
+    }
+    /* .navresponsive {
+        width: 100%;
+        position: fixed;
+        z-index: 9999999;
+        background: white;
+        height: 77px;
+       
+    }
+    .navresponsive2 {
+        width: 100%;
+        position: fixed;
+        z-index: 9999999;
+        background: black;
+        height: 77px;
+    } */
+    .adtmtext {
+        margin-top: 80px;
+    }
+    .headnav {
+        margin-top: 10px;
+    }
+    .searchres {
+        margin-top: 50px;
+    }
+    .adtmtextres {
+        margin-top: 105px;
+    }
+    .photo2 {
+        display: none;
+    }
+    .owlim1 {
+        height: 300px;
+    }
+    .owlcont2 img {
+        height: 300px;
+    }
+    .slider2 {
+        margin-bottom: 50px;
+    }
+    .img-fluid2 {
+        height: 300px;
+    }
+    #todo4 {
+        width: 1.5rem !important;
+    }
+    #todo3 {
+        width: 1.5rem !important;
+    }
+    .ellipse2 {
+        right: 32%;
+    }
+    .dischecktext h2,
+    span {
+        font-size: 23px;
+    }
+    .formapp1,
+    .formapp2 {
+        height: 100%;
+    }
+    .formappback,
+    .formappback2 {
+        background: white;
+    }
+    .btnrespay {
+        display: block;
+    }
+    .resvideoarea {
+        display: block;
+    }
+    .btnbig {
+        display: none;
+    }
+    .videoareabig {
+        display: none;
+    }
+    .navbar-light {
+        background: white;
+    }
+    .footlogo span {
+        font-size: 16px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .btnhead {
+        margin-top: 40px;
+    }
+    .adtmp {
+        width: 100%;
+    }
+    .disablep {
+        flex-flow: row;
+    }
+    .navitemceleb {
+        display: inline;
+    }
+    /* .headnavres {
+        display: flex;
+        justify-content: flex-end;
+    } */
+    .galrespmar {
+        margin-bottom: 50px;
+    }
+    .sociallinks {
+        position: unset;
+        /* margin-left: 30px; */
+        display: flex;
+        justify-content: center;
+        margin-right: 80px;
+    }
+    .secresp {
+        justify-content: center;
+        margin-top: 10px;
+        /* margin-left: 30px; */
+    }
+    .footer {
+        position: unset;
+    }
+    .tit {
+        height: auto;
+        background: unset;
+    }
+    /* .navbar-nav {
+        align-items: flex-end;
+        height: 100%;
+    }
+    .navbar {
+        position: fixed;
+        z-index: 10;
+    }
+    .nav-link {
+        color: white !important;
+    } */
+    .cath {
+        display: none;
+    }
+    .catlist {
+        display: none;
+    }
+    #showmore {
+        display: none;
+    }
+    #showless {
+        display: none;
+    }
+    .searchform {
+        background: transparent;
+    }
+    .responsivecatlist {
+        display: block;
+    }
+    .gallery2 {
+        margin-top: 0;
+    }
+    .tit2 {
+        height: auto;
+    }
+    .infoframe {
+        height: auto;
+    }
+    .carousel-control-prev {
+        display: none;
+    }
+    .carousel-control-next {
+        display: none;
+    }
+    .sayusimg img {
+        object-fit: fill;
+    }
+    .headnav2 {
+        margin-bottom: 50px;
+    }
+    .img-fluid {
+        object-fit: fill;
+    }
+    .tags ul {
+        flex-wrap: wrap;
+    }
+    .adtmtext {
+        flex-wrap: wrap;
+    }
+    select {
+        width: 100%;
+    }
+    /* .navresponsive {
+        width: 100%;
+        position: fixed;
+        z-index: 9999999;
+        background: white;
+        height: 77px;
+    }
+    .navresponsive2 {
+        width: 100%;
+        position: fixed;
+        z-index: 9999999;
+        background: black;
+        height: 77px;
+        margin-left: -40px;
+    } */
+    .adtmtext {
+        margin-top: 80px;
+    }
+    .headnav {
+        margin-top: 10px;
+    }
+    .searchres {
+        margin-top: 50px;
+    }
+    .adtmtextres {
+        margin-top: 105px;
+    }
+    .adtmimgres {
+        margin-top: 105px;
+    }
+    .btnrespay {
+        display: block;
+    }
+    .resvideoarea {
+        display: block;
+    }
+    .btnbig {
+        display: none;
+    }
+    .videoareabig {
+        display: none;
+    }
+    .formapp1,
+    .formapp2 {
+        height: 100%;
+    }
+    .navbar-light {
+        background: white;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
+/* @media only screen and (min-width: 992px) {
+        .btnnav {
+            display: flex;
+        }
+        .navitemceleb {
+            display: none;
+        }
+    } */

@@ -1,0 +1,299 @@
+﻿@model  Vwcelebrities
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="az" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Celebro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Public/assets/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="~/Public/assets/css/responsive.css" rel="stylesheet" type="text/css">
+
+
+
+
+</head>
+
+<body>
+
+    <div class="formappback">
+        <div class="cancelform">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="formapp1">
+            <h2>Anketi doldurun,gerisi bizdə!</h2>
+            @using (Html.BeginForm("index", "home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-row">
+
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+
+                        <label for="exampleInputText2">Ad,soyad</label>
+                        @Html.EditorFor(model => model.Celebrity.Fullname, new { htmlAttributes = new { @class = "form-control form-controlsu2", placeholder = "Ad,soyad" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Fullname, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="inputState">Peşə</label>
+
+                        @Html.DropDownList("CategoryID", new SelectList(ViewBag.Categories, "Id", "Name"), new { @class = "form-control form-controlsu2" })
+                        @Html.ValidationMessageFor(model => model.Celebrity.CategoryID, "", new { @class = "text-danger" })
+
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12 ">
+                        <label for="exampleInputEmail2">E-mail</label>
+                        @Html.EditorFor(model => model.Celebrity.Mail, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "celebro@gmail.com" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Mail, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group  joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputSocialmedia2">Sosial media hesabınız</label>
+                        @Html.EditorFor(model => model.Celebrity.Socialmedia, new { htmlAttributes = new { @class = "form-control form-controlsu2", placeholder = "http:://instagram/celebro" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Socialmedia, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputSocialmedia2">Telefon nömrəniz</label>
+                        @Html.EditorFor(model => model.Celebrity.Phone, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "+994 *** ** **" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Phone, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputText3">Qiymət gözləntiniz</label>
+                        @Html.EditorFor(model => model.Celebrity.Price, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "Gözlədiyiniz qiyməti yazın" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Price, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <button type="submit" class="btn btn-primary btnjoinus">BİZƏ QOŞUL</button>
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <section class="tit">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="~/Public/assets/images/Celebro logo.svg" class="logoimg">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars fadark"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link   menulist " href="#">Bütün məşhurlar </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   menulist " href="#">Suallar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   menulist " href="#">Bloq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link   menulist " href="#">Kariyera</a>
+                        </li>
+                        <button class="btn btnnav btnceleb">
+                            <a href="#" class="btntext">MƏŞHURSAN GƏL</a>
+                        </button>
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="container">
+
+            <div class="row ">
+                <div class="adtmtext  d-flex justify-content-center align-content-center">
+                    <div class="col-lg-5 col-md-5 d-flex justify-content-center flex-column adtmtextall">
+                        <p class="adtmh">
+                            Məşhurlar arasından birini seç
+                        </p>
+                        <p class="adtmp">
+                            Sənə və sevdiklərinə xüsusi çəkilmiş hədiyyə video istə
+                        </p>
+                        <button class="btn btnhead">
+                            <a href="#" class="btntext">İNDİ AL</a>
+                        </button>
+                        <div class="disablep">
+                            <div class="disp1">Bizimlə tanış olun</div>
+                            <div class="disp2"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 ">
+                        <div>
+                            <img src="~/Public/assets/images/heeder.jpg" class="photo" alt="">
+                        </div>
+                        <div class="headicon">
+                            <div class="ellipse2">
+                                <div class="ellipse1">
+                                    <div class="polygon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="searchgroup">
+                        <input class="form-control searchform" type="text" placeholder="Ad,nick,etiket,platforma" id="search-input4">
+                        <!-- <button class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right" type="button"> -->
+                        <button type="submit" class="searchicon" id="searchbtn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <!-- </button> -->
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-0 col-sm-0">
+                    <div class="cath">
+                        <h1>Kateqoriya</h1>
+                    </div>
+                    <div class="catlist">
+                        <ul class="catlistul">
+                            <li class="catsearch" value="0">
+                                Hamısı
+                            </li>
+                            @foreach (var item in Model.Categories)
+                            {
+                                <li class="catsearch" value="@item.Id">
+                                    @item.Name
+                                </li>
+                            }
+
+
+                        </ul>
+                    </div>
+                    <div class="responsivecatlist">
+                        <!-- <select class="form-control responsivecatlistform">
+                            <option selected>Select...</option>
+                            <option >Select...</option>
+                            <option >Select...</option>
+
+                          </select> -->
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle responsivecatlistform" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown link
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="gallery d-flex">
+                    @foreach (var item in Model.Celebrities)
+                    {
+                        <div class="col-lg-3 col-md-6 col-sm-12 galrespmar">
+                            <a class="celebimg" href="#">
+                                <div class="galdetail">
+                                    <div class="galimg">
+                                        <img src="~/Public/assets/images/@item.Photo" class=" img-fluid personimg">
+
+                                    </div>
+                                    <div class="galtext">
+                                        <h1>@item.Fullname</h1>
+                                        <p>@item.Category.Name</p>
+                                    </div>
+                                    <div class="btnprice">
+                                        <span>@item.Price AZN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 d-flex secresp">
+                        <div class="security">
+                            <a href="#">Gizlilik</a>
+                            <span> | </span>
+                            <a href="#">İstifadəçi sözləşməsi</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center">
+                        <div class="footlogo">
+                            <span>© Müəlliflik hüququ 2020 celebro</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="sociallinks">
+                            <ul>
+                                <li>
+                                    <a href="#" class="fa fa-twitter">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-facebook-f">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="fa fa-instagram">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>*@
+    <script src="~/Public/assets/js/script.js"></script>
+
+</body>
+
+
+</html>

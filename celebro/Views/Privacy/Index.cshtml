@@ -1,0 +1,307 @@
+﻿@model Vwform1
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Celebro</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Public/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Public/assets/css/responsive.css" rel="stylesheet" type="text/css">
+
+   
+
+</head>
+
+
+<body>
+    <div class="formappback">
+        <div class="cancelform">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="formapp1">
+            <h2>Anketi doldurun,gerisi bizdə!</h2>
+            @using (Html.BeginForm("index", "home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-row">
+
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+
+                        <label for="exampleInputText2">Ad,soyad</label>
+                        @Html.EditorFor(model => model.Celebrity.Fullname, new { htmlAttributes = new { @class = "form-control form-controlsu2", placeholder = "Ad,soyad" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Fullname, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="inputState">Peşə</label>
+
+                        @Html.DropDownList("CategoryID", new SelectList(ViewBag.Categories, "Id", "Name"), new { @class = "form-control form-controlsu2" })
+                        @Html.ValidationMessageFor(model => model.Celebrity.CategoryID, "", new { @class = "text-danger" })
+
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12 ">
+                        <label for="exampleInputEmail2">E-mail</label>
+                        @Html.EditorFor(model => model.Celebrity.Mail, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "celebro@gmail.com" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Mail, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group  joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputSocialmedia2">Sosial media hesabınız</label>
+                        @Html.EditorFor(model => model.Celebrity.Socialmedia, new { htmlAttributes = new { @class = "form-control form-controlsu2", placeholder = "http:://instagram/celebro" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Socialmedia, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputSocialmedia2">Telefon nömrəniz</label>
+                        @Html.EditorFor(model => model.Celebrity.Phone, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "+994 *** ** **" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Phone, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group joinusform col-lg-6 col-md-6 col-sm-12">
+                        <label for="exampleInputText3">Qiymət gözləntiniz</label>
+                        @Html.EditorFor(model => model.Celebrity.Price, new { htmlAttributes = new { @class = "form-control  form-controlsu2", placeholder = "Gözlədiyiniz qiyməti yazın" } })
+                        @Html.ValidationMessageFor(model => model.Celebrity.Price, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <button type="submit" class="btn btn-primary btnjoinus">BİZƏ QOŞUL</button>
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <section class="tit2">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="~/Public/assets/images/Celebro logo2.svg" class="logoimg logoimg2">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars falight">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link2  menulist " href="#">Bütün məşhurlar </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link2   menulist " href="#">Suallar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  nav-link2  menulist " href="#">Bloq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link2  menulist " href="#">Kariyera</a>
+                        </li>
+                        <button class="btn btnnav btnceleb">
+                            <a href="#" class="btntext">MƏŞHURSAN GƏL</a>
+                        </button>
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="container">
+
+            <div class="row ">
+                <div class="adtmtext2 d-flex ">
+                    <div class="col-lg-10 col-md-12 col-sm-12">
+                        <p class="adtmh2">
+                            İstifadəçi xidmət müqaviləsi
+                        </p>
+                        <p class="adtmp2">
+                            Www.celebro.com veb saytı və mobil tətbiqetmə platformanın istifadəçilərivə faydalananları aşağıda göstərilən şərtləri oxumaq və tövsiyə olunur.Aşağıdakı şərtlər qəbul edilmirsə, platformanın istifadəsi dayandırılmalı və dərhal dayandırılmalıdır. 18 yaşdan
+                            kiçik insanlara platformanınistifadəçisi olmaq qadağandır. 18 yaşdan kiçik şəxslər platformadan yalnız valideynləri / qəyyumları bu istifadə şərtlərini qəbul etdikləri təqdirdə yararlanmaq hüququna malikdirlər
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contract">
+        <div class="container">
+            <div class="row">
+                <div class="contactinfo d-flex">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mauto">
+                        <div class="conttext">
+                            <h2>Üçüncü tərəf əlaqələri</h2>
+                            <p>
+                                Www.celebro.com veb saytı və mobil tətbiqetmədə üçüncü tərəf saytlarına, eklentilər və tətbiqlərə bağlantılar ola bilər. NINJA əlaqəli üçüncü tərəf veb saytlarına nəzarət edə bilməz və məxfilik bəyanatlarına nəzarət etmir.
+                                Www.fideyo.com saytından keçməklə üçüncü tərəf veb saytına baş çəksəniz, müvafiq saytların məxfilik siyasətini ayrıca oxumağı məsləhət görürük.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="contimg">
+                            <img src="~/Public/assets/images/contractimg.jpg" class="img-fluid2 img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="contactinfo d-flex">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="contimg">
+                            <img src="~/Public/assets/images/7251494613735.original.jpg" class="img-fluid2 img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mauto ">
+                        <div class="conttext">
+                            <h2>Şəxsi məlumatlarınızı bölüşmək </h2>
+                            <p>
+                                Şəxsi məlumatlarınızı xarici şirkətlər və bizim adımızdan fəaliyyət göstərən şəxslər, o cümlədən qanun ofislərimiz, mühasibat xidmətləri, müştəri xidmətləri, bank və sığorta şirkətləri ilə, zəruri hallarda və məhdud dərəcədə,
+                                hüquqi öhdəliklər istisna olmaqla, xidmətlərin xarakterindən irəli gələn öhdəliklərin icrası üçün lazım olan dərəcədə bölüşə bilərik.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="contactinfo d-flex">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mauto ">
+                        <div class="conttext">
+                            <h2>Xaricə göndərin</h2>
+                            <p>
+                                Avropa Birliyi Bölgəsində, yerli qanun, server və e-poçt təsdiqləyiciləri, geliştirici və məsləhət istehsalçıları, bəzi xarturist xidm xidməti şirkətlərində bir çox qüsurun olduğu ölçüldü. Veb v em elektron poçt xidmətləri,
+                                çox sayda nəticə verdiniz. Bir saat hansi xidmət tld av verdiniz. Bu cılız, yaltaq və ya emal almağa hazırsınız. Ninja, xxsy işlərinizi heç bir şübhəsiz və bu mxfizm siyasətinə uyğun olaraq təmin etmək üçün bütün ehtiyaclarınızı
+                                yerinə yetirəcəkdir.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="contimg">
+                            <img src="~/Public/assets/images/Schermafbeelding-2019-12-24-om-09.59.50.png" class="img-fluid2 img-fluid">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="contactinfo d-flex">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="contimg">
+                            <img src="~/Public/assets/images/How-to-Prepare-for-a-Consultation-with-an-Attorney-Rad-Law-Firm-1024x683.jpg" class="img-fluid2 img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mauto col-md-6 col-sm-12">
+                        <div class="conttext">
+                            <h2>Gizlilik siyasətimizdəki dəyişikliklər</h2>
+                            <p>
+                                Gələcəkdə məxfilik siyasətimizdə edə biləcəyimiz hər hansı bir dəyişiklik bu səhifədə yerləşdiriləcək və lazım olduqda sizə elektron poçtla bildiriləcəkdir. Xahiş edirəm bu siyasətə yeniləmələri və dəyişiklikləri görmək üçün
+                                yoxlayın.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bottomcontent">
+        <div class="container">
+            <div class="row">
+                <h2 class="bottomheaderh">Şəxsi məlumatlara giriş və saxlanma hüquqlarınız</h2>
+                <div class="privacyinfos">
+                    <div class="col-lg-4  ">
+                        <div class="infoframe d-flex">
+                            <div class="container infoalign">
+                                <div class="infotext">
+                                    <h2>01.</h2>
+                                    <h2>Hesabınıza giriş</h2>
+                                    <p>
+                                        Şəxsi məlumatlarınızı görmək, düzəltmək və ya yeniləmək istəyirsinizsə, istifadəçi hesabınıza Sayt hesabı və ya mobil tətbiqetməyinizlə daxil olmaqla şəxsi məlumatlarınıza baxa və yeniləyə bilərsiniz. Hesabınızı bağlamaq
+                                        istəyirsinizsə, onu elektron poçtla business@fideyo.com ya da istifadəçi hesabı nişanından göndərərək bağlaya bilərsiniz.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="infoframe d-flex">
+                            <div class="container infoalign">
+                                <div class="infotext">
+                                    <h2>02.</h2>
+                                    <h2>Saxlama müddəti</h2>
+                                    <p>
+                                        Şəxsi məlumatlarınızı silməyinizi tələb etdiyiniz zaman, əvvəlcə digər istifadəçilərin əldə edə bilməyəcəyi şəkildə saytımızdan və mobil tətbiqetmələrimizdən silinir. Silinməsi tələb olunan məlumatlar, qanuni olaraq
+                                        saxlamalı olduğumuz məzmun və mümkün sübut yükümüz üçün tələb olunan məzmun arasında deyilsə, sorğunuzdan 3 gün ərzində silinəcəkdir.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="infoframe d-flex">
+                            <div class="container infoalign">
+                                <div class="infotext">
+                                    <h2>03.</h2>
+                                    <h2>Hüquqlarınız</h2>
+                                    <p>
+                                        Şəxsi məlumatlarınızı əldə etmək, köçürmək, düzəltmək və ya silməyi tələb etmək hüququnuz var. Siz hüquqlarınız haqqında məlumat əldə etmək və tələb etmək üçün business@fideyo.com elektron poçtu ilə əlaqə quraraq istənilən
+                                        vaxt istifadə edə bilərsiniz. Şəxsi məlumatlarınıza daxil olmaq üçün (və ya digər hüquqlardan hər hansı birini istifadə etmək üçün), NINJA bir qayda olaraq ödəniş tələb etmir, ancaq tələbiniz səbəbsiz səbəblər olmadan
+                                        təkrarlanırsa və ya Əlavə bir xərc tələb edərsə, uyğun bir haqq almaq haqqımız var.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mdetail">
+        <div class="footer  ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 d-flex secresp">
+                        <div class="security">
+                            <a href="#">Gizlilik</a>
+                            <span> | </span>
+                            <a href="#">İstifadəçi sözləşməsi</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center">
+                        <div class="footlogo">
+                            <span>© Müəlliflik hüququ 2020 celebro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="~/Public/assets/js/script.js"></script>
+</body>
+
+
+</html>
