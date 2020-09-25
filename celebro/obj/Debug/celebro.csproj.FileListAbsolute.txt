@@ -450,3 +450,5 @@ C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\cel
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.csproj.CopyComplete
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.dll
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.pdb
+C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.Migrations.Adminpanelmodel.resources
+C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.Migrations.Adminpanelpass.resources

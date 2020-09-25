@@ -16,7 +16,8 @@ namespace celebro.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Suggestion> Suggestions { get; set; }
-
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<Admincat> Admincats { get; set; }
 
 
     }
