@@ -199,6 +199,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Manage\CategoriesController.cs" />
+    <Compile Include="Areas\Manage\CelebritiesController.cs" />
+    <Compile Include="Areas\Manage\LoginController.cs" />
+    <Compile Include="Areas\Manage\OrdersController.cs" />
+    <Compile Include="Areas\Manage\SuggestionsController.cs" />
     <Compile Include="Controllers\AllcelebritiesController.cs" />
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -489,6 +494,28 @@
     <Content Include="Public\OwlCarousel2-2.3.4\src\scss\_theme.scss" />
     <Content Include="Public\OwlCarousel2-2.3.4\src\scss\_video.scss" />
     <Content Include="Public\OwlCarousel2-2.3.4\_config.json" />
+    <Content Include="Areas\Manage\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Manage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Manage\Views\Celebrities\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Celebrities\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Celebrities\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Celebrities\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Celebrities\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Orders\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Orders\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Orders\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Orders\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Orders\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Suggestions\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Suggestions\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Suggestions\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Suggestions\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Suggestions\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -622,7 +649,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\" />
+    <Folder Include="Areas\Manage\Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
