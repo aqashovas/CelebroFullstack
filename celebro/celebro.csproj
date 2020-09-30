@@ -2021,6 +2021,7 @@
     <Content Include="Areas\Manage\Views\Admins\Details.cshtml" />
     <Content Include="Areas\Manage\Views\Admins\Edit.cshtml" />
     <Content Include="Areas\Manage\Views\Admins\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2155,7 +2156,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Manage\Models\" />
-    <Folder Include="Areas\Manage\Views\Dashboard\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

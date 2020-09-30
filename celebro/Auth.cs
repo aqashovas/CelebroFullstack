@@ -14,7 +14,7 @@ namespace celebro
 
             if (HttpContext.Current.Session["login"] == null)
             {
-                filterContext.Result = new RedirectResult("~/login");
+                filterContext.Result = new RedirectResult("~/manage/login");
                 return;
             }
 

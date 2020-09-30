@@ -440,7 +440,6 @@ C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\bin\Newtonsof
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\bin\Antlr3.Runtime.pdb
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.csprojAssemblyReference.cache
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.Migrations.Initdb.resources
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.Migrations.ordervideosrc.resources
 C:\Users\Sabina123\Source\Repos\aqashovas\CelebroFullstack\celebro\obj\Debug\celebro.Migrations.foreignkey.resources
